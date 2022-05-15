@@ -13,7 +13,6 @@ const StudentsPage: React.FC = () => {
 
     return (
         <BaseLayout>
-            <AutocompleteField students={data?.studentsList?.items} />
             <StudentsList
                 students={data?.studentsList?.items}
                 loading={loading}
