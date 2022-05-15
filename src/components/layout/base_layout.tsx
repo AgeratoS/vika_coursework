@@ -1,16 +1,14 @@
 import React, { ReactNode } from "react";
+import Header from "../header";
+import Footer from "../footer";
 
 const BaseLayout: React.FC<{children: ReactNode}> = ({ children }) => (
     <>
-        <header>
-            <p>Шапка</p>
-        </header>
+        <Header />
         <main>
             {children}
         </main>
-        <footer>
-            <p>Подвал</p>
-        </footer>
+        <Footer />
     </>
 )
 

@@ -21,18 +21,22 @@ const StudentsList: React.FC<StudentsListProps> = ({ students, loading, error })
     }
     else {
         return <table>
-            <tr>
-                <th>Фамилия</th>
-                <th>Имя</th>
-                <th>Отчество</th>
-            </tr>
-            {students!.map((student) => (
+            <thead>
                 <tr>
+                    <th>Фамилия</th>
+                    <th>Имя</th>
+                    <th>Отчество</th>
+                </tr>
+            </thead>
+            <tbody>
+            {students!.map((student) => (
+                <tr key={student.id}>
                     <td>{student.lastName}</td>
                     <td>{student.firstName}</td>
                     <td>{student.middleName}</td>
                 </tr>
             ))}
+            </tbody>
         </table>
     }
 }
