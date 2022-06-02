@@ -52,8 +52,8 @@ const AddStudentForm: React.FC<AddStudentFormProps> = ({ onSubmit, disciplinesLi
                     <InputLabel>Наименование дисциплины</InputLabel>
                     <Select
                         name={'mark.create.discipline.connect.id'}
-                        onSelect={handleChange('mark.items[0].discipline.name')}
-                        onBlur={handleBlur('mark.items[0].discipline.name')}
+                        onSelect={handleChange('mark.create.discipline.connect.id')}
+                        onBlur={handleBlur('mark.create.discipline.connect.id')}
                     >
                         {disciplinesList.map(discipline => (
                             <MenuItem value={discipline.id}>{discipline.name}</MenuItem>
@@ -64,17 +64,17 @@ const AddStudentForm: React.FC<AddStudentFormProps> = ({ onSubmit, disciplinesLi
                 <FormControl>
                     <InputLabel>Наименование работы</InputLabel>
                     <Input
-                        name={'mark.name'}
-                        onChange={handleChange('mark.name')}
-                        onBlur={handleBlur('mark.name')}
+                        name={'mark.create.name'}
+                        onChange={handleChange('mark.create.name')}
+                        onBlur={handleBlur('mark.create.name')}
                     />
                 </FormControl>
                 <FormControl>
                     <InputLabel>Оценка</InputLabel>
                     <Input
-                        name={'mark.mark'}
-                        onChange={handleChange('mark.mark')}
-                        onBlur={handleBlur('mark.mark')}
+                        name={'mark.create.mark'}
+                        onChange={handleChange('mark.create.mark')}
+                        onBlur={handleBlur('mark.create.mark')}
                     />
                 </FormControl>
                 <Button type="submit">Добавить пользователя</Button>
