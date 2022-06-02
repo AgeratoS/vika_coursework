@@ -1,5 +1,5 @@
 import React from 'react';
-import {ThemeProvider} from "@mui/material";
+import {CssBaseline, ThemeProvider} from "@mui/material";
 import {theme} from "./constants";
 import { AppRouter } from './routing';
 import {ApolloClient, ApolloProvider, InMemoryCache} from "@apollo/client";
@@ -17,6 +17,7 @@ function App() {
   return (
       <ApolloProvider client={client}>
           <ThemeProvider theme={theme}>
+              <CssBaseline />
               <AppRouter/>
           </ThemeProvider>
       </ApolloProvider>
