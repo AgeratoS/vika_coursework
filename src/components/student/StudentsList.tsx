@@ -37,7 +37,7 @@ const StudentsList: React.FC<StudentsListProps> = ({ students, loading, error })
                     <td>{student.lastName}</td>
                     <td>{student.firstName}</td>
                     <td>{student.middleName}</td>
-                    <td>{student.mark.items[0]?.discipline.name}</td>
+                    <td>{student.mark.items[0]?.discipline?.name}</td>
                     <td>{student.mark.items[0]?.name}</td>
                     <td>{student.mark.items[0]?.mark}</td>
                 </tr>
