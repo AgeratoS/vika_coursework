@@ -13,7 +13,9 @@ const AddStudentPage = () => {
 
     return loading ? <CircularProgress /> : <BaseLayout>
         <AddStudentForm disciplinesList={data.disciplinesList.items} onSubmit={async (values) => {
-            await addStudent({ variables: { data: values} });
+            // @ts-ignore
+            const newValue = {...values, mark: {create: {...values.mark.create, mark: parseInt(values.mark.create.mark)}}};
+            await addStudent({ variables: { data: newValue} });
             if (error !== undefined) {
                 navigate('/students');
             }
