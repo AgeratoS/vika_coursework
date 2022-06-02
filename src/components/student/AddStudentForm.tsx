@@ -4,7 +4,7 @@ import React from "react";
 import {Button, FormControl, Input, InputLabel} from "@mui/material";
 
 type AddStudentFormProps = {
-    onSubmit: (values: Omit<Student, 'id'>) => void;
+    onSubmit: (values: Omit<Student, 'id' | 'mark'>) => void;
 };
 
 const AddStudentForm: React.FC<AddStudentFormProps> = ({ onSubmit }) =>
