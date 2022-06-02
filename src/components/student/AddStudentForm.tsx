@@ -21,7 +21,7 @@ const AddStudentForm: React.FC<AddStudentFormProps> = ({ onSubmit, disciplinesLi
         }}
         onSubmit={onSubmit}
     >
-        {({ handleSubmit, handleChange, handleBlur }) => (
+        {({ handleSubmit, handleChange, handleBlur, setFieldValue }) => (
             <form onSubmit={handleSubmit}>
                 <FormControl>
                     <InputLabel>Фамилия</InputLabel>
@@ -52,7 +52,10 @@ const AddStudentForm: React.FC<AddStudentFormProps> = ({ onSubmit, disciplinesLi
                     <InputLabel>Наименование дисциплины</InputLabel>
                     <Select
                         name={'mark.create.discipline.connect.id'}
-                        onSelect={handleChange('mark.create.discipline.connect.id')}
+                        onChange={(e) => {
+                            const value = e.target.value;
+                            setFieldValue('mark.create.discipline.connect.id', value);
+                        }}
                         onBlur={handleBlur('mark.create.discipline.connect.id')}
                     >
                         {disciplinesList.map(discipline => (
