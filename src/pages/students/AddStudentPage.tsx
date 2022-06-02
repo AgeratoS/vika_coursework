@@ -12,7 +12,7 @@ const AddStudentPage = () => {
     const navigate = useNavigate();
 
     return loading ? <CircularProgress /> : <BaseLayout>
-        <AddStudentForm disciplinesList={data} onSubmit={async (values) => {
+        <AddStudentForm disciplinesList={data.items} onSubmit={async (values) => {
             await addStudent({ variables: { data: values} });
             if (error !== undefined) {
                 navigate('/students');
