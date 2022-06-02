@@ -26,6 +26,9 @@ const StudentsList: React.FC<StudentsListProps> = ({ students, loading, error })
                     <th>Фамилия</th>
                     <th>Имя</th>
                     <th>Отчество</th>
+                    <th>Дисциплина</th>
+                    <th>Наименование работы</th>
+                    <th>Оценка</th>
                 </tr>
             </thead>
             <tbody>
@@ -34,6 +37,9 @@ const StudentsList: React.FC<StudentsListProps> = ({ students, loading, error })
                     <td>{student.lastName}</td>
                     <td>{student.firstName}</td>
                     <td>{student.middleName}</td>
+                    <td>{student.mark.items[0]?.discipline.name}</td>
+                    <td>{student.mark.items[0]?.name}</td>
+                    <td>{student.mark.items[0]?.mark}</td>
                 </tr>
             ))}
             </tbody>

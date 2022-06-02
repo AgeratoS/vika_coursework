@@ -5,6 +5,15 @@ type Student = {
     firstName: string;
     lastName: string;
     middleName: string;
+    mark: {
+        items: {
+           discipline: {
+               name: string;
+           },
+           name: string;
+           mark: number;
+        }[];
+    }
 };
 
 

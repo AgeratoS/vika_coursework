@@ -7,6 +7,15 @@ const GET_STUDENTS = gql`
       firstName
       lastName
       middleName
+      mark {
+        items {
+           discipline {
+             name
+           }
+           name
+           mark
+        }
+      }
     }
   }
 }
