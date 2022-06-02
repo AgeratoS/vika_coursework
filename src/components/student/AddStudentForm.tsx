@@ -4,7 +4,7 @@ import React from "react";
 import {Button, FormControl, Input, InputLabel, MenuItem, Select} from "@mui/material";
 
 type AddStudentFormProps = {
-    onSubmit: (values: Omit<Student, 'id'>) => void;
+    onSubmit: (values: Omit<Student, 'id' | 'mark'>) => void;
     disciplinesList: {
         name: string;
         id: string;
@@ -17,9 +17,7 @@ const AddStudentForm: React.FC<AddStudentFormProps> = ({ onSubmit, disciplinesLi
             firstName: '',
             lastName: '',
             middleName: '',
-            mark: {
-                items: []
-            }
+            mark: {}
         }}
         onSubmit={onSubmit}
     >
