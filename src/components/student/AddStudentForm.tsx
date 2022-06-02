@@ -48,7 +48,8 @@ const AddStudentForm: React.FC<AddStudentFormProps> = ({ onSubmit, disciplinesLi
                         onBlur={handleBlur('middleName')}
                     />
                 </FormControl>
-                <FormControl>
+                <div>
+                    <FormControl>
                     <InputLabel>Наименование дисциплины</InputLabel>
                     <Select
                         name={'mark.items[0].discipline.name'}
@@ -56,10 +57,11 @@ const AddStudentForm: React.FC<AddStudentFormProps> = ({ onSubmit, disciplinesLi
                         onBlur={handleBlur('mark.items[0].discipline.name')}
                     >
                         {disciplinesList.map(discipline => (
-                            <MenuItem value={discipline.name} />
+                            <MenuItem value={discipline.name}/>
                         ))}
                     </Select>
                 </FormControl>
+                </div>
                 <FormControl>
                     <InputLabel>Наименование работы</InputLabel>
                     <Input
