@@ -15,6 +15,7 @@ const AddStudentPage = () => {
         <AddStudentForm disciplinesList={data.disciplinesList.items} onSubmit={async (values) => {
             // @ts-ignore
             const newValue = {...values, mark: {create: {...values.mark.create, mark: parseInt(values.mark.create.mark)}}};
+            console.log("new value is "+ newValue);
             await addStudent({ variables: { data: newValue} });
             if (error !== undefined) {
                 navigate('/students');

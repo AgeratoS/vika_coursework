@@ -5,7 +5,6 @@ import {students} from "../../queries";
 import StudentsList from "../../components/student/StudentsList";
 import {Button} from "@mui/material";
 import {Link} from "react-router-dom";
-import AutocompleteField from "../../components/student/AutocompleteField";
 
 const StudentsPage: React.FC = () => {
 
