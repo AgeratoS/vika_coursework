@@ -18,7 +18,7 @@ const StudentsPage: React.FC = () => {
                 error={error}
             />
             <Button component={Link} to={'/students/add'}>
-                Добавить ученика
+                Добавить оценку
             </Button>
         </BaseLayout>
     );

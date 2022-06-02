@@ -80,7 +80,7 @@ const AddStudentForm: React.FC<AddStudentFormProps> = ({ onSubmit, disciplinesLi
                         onBlur={handleBlur('mark.create.mark')}
                     />
                 </FormControl>
-                <Button type="submit">Добавить пользователя</Button>
+                <Button type="submit">Добавить оценку</Button>
             </form>
         )}
     </Formik>;
