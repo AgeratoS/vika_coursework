@@ -6,6 +6,15 @@ mutation MyMutation($data: StudentCreateInput!){
     firstName
     lastName
     middleName
+    mark {
+      items {
+        discipline {
+          name
+        }
+        name
+        mark
+      }
+    }
   }
 }
 `;
