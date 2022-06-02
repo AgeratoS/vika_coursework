@@ -4,6 +4,7 @@ const GET_DISCIPLINES = gql`
    query {
        disciplinesList {
         items {
+          id
           name
         }
       }

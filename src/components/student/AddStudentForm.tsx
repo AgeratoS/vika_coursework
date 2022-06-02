@@ -7,6 +7,7 @@ type AddStudentFormProps = {
     onSubmit: (values: Omit<Student, 'id'>) => void;
     disciplinesList: {
         name: string;
+        id: string;
     }[];
 };
 
@@ -52,12 +53,12 @@ const AddStudentForm: React.FC<AddStudentFormProps> = ({ onSubmit, disciplinesLi
                     <FormControl>
                     <InputLabel>Наименование дисциплины</InputLabel>
                     <Select
-                        name={'mark.items[0].discipline.name'}
+                        name={'mark.create.discipline.connect.id'}
                         onSelect={handleChange('mark.items[0].discipline.name')}
                         onBlur={handleBlur('mark.items[0].discipline.name')}
                     >
                         {disciplinesList.map(discipline => (
-                            <MenuItem value={discipline.name}/>
+                            <MenuItem value={discipline.id}>{discipline.name}</MenuItem>
                         ))}
                     </Select>
                 </FormControl>
